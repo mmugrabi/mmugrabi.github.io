@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var allowed = ["light", "dark", "matrix", "aurora"], t = "dark";
+      try {
+        var saved = localStorage.getItem("theme");
+        if (allowed.indexOf(saved) !== -1) t = saved;
+      } catch (e) {}
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Mathieu Mugrabi</h1>
+
+    <div class="theme-picker">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Choose theme" aria-haspopup="true" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.8 1.8-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-3.9-4-7.2-9-7.2z"/>
+          <circle cx="7.5" cy="11" r="1"/>
+          <circle cx="10.5" cy="7.5" r="1"/>
+          <circle cx="15" cy="7.5" r="1"/>
+        </svg>
+      </button>
+      <ul class="theme-menu" id="theme-menu" hidden>
+        <li><button data-theme="light"><span class="swatch swatch-light"></span>Light</button></li>
+        <li><button data-theme="dark"><span class="swatch swatch-dark"></span>Dark</button></li>
+        <li><button data-theme="matrix"><span class="swatch swatch-matrix"></span>Matrix</button></li>
+        <li><button data-theme="aurora"><span class="swatch swatch-aurora"></span>Aurora</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Sections">
+    <button class="tab active" role="tab" id="tab-about" aria-selected="true" aria-controls="panel-about" data-target="about">About me</button>
+    <button class="tab" role="tab" id="tab-projects" aria-selected="false" aria-controls="panel-projects" data-target="projects" tabindex="-1">Projects</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+      <p>I hold a bachelor's degree in computer science from the Université libre de Bruxelles (ULB), and I am currently finishing my master's thesis in signal processing.</p>
+      <p>I enjoy turning data and signals into something useful, from analysing real-world datasets to building programs that learn. On this page you will find some of my personal projects, all with their source code on GitHub.</p>
+    </section>
+
+    <section class="panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" hidden>
+      <div class="grid">
+
+        <article class="card">
+          <h2>Epidemiology Project</h2>
+          <p>An epidemiology project exploring how diseases spread through a population, using data analysis and modelling.</p>
+          <a href="https://github.com/mmugrabi/Epidemiology-Project" target="_blank" rel="noopener">View repository</a>
+        </article>
+
+        <article class="card">
+          <h2>Snake-IA</h2>
+          <p>An artificial intelligence that learns to play the classic Snake game on its own.</p>
+          <a href="https://github.com/mmugrabi/Snake-IA" target="_blank" rel="noopener">View repository</a>
+        </article>
+
+        <article class="card">
+          <h2>Odoo</h2>
+          <p>Work with Odoo, the open-source business management platform, including customised modules.</p>
+          <a href="https://github.com/mmugrabi/odoo" target="_blank" rel="noopener">View repository</a>
+        </article>
+
+        <!-- To add another project, copy an <article> block above and paste it here. -->
+
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
