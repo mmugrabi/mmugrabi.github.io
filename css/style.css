@@ -245,3 +245,97 @@ main {
 .swatch-dark { background: #0d1117; border-color: #58a6ff; }
 .swatch-matrix { background: #000000; border-color: #39ff6a; }
 .swatch-aurora { background: linear-gradient(135deg, #6d28d9, #ff7eb6, #ffd166); }
+
+/* About page */
+.subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+#panel-about { max-width: 65ch; margin: 0 auto; }
+#panel-about p { margin: 0 0 1rem; max-width: none; }
+#panel-about .lead { font-size: 1.2rem; }
+
+.section-title {
+  margin: 2.5rem 0 1rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--heading);
+}
+
+.skills { margin: 0; }
+.skill-group { margin-bottom: 1.1rem; }
+.skill-group dt {
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.skill-group dd { margin: 0; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+.chips img { display: block; width: auto; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn:hover { opacity: 0.85; }
+.btn-outline { background: transparent; color: var(--accent); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* Experience and education entries */
+.entry { margin-bottom: 1.5rem; }
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+.entry h3 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.entry .entry-meta { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.9rem; }
+.entry-head .entry-meta { margin: 0; }
+.entry ul { margin: 0; padding-left: 1.25rem; }
+.entry li { margin-bottom: 0.25rem; }
+
+/* Logos next to education entries */
+.entry.has-logo { display: flex; align-items: flex-start; gap: 1rem; }
+.entry-body { flex: 1; min-width: 0; }
+.entry-logo {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  padding: 4px;
+  background: #ffffff;
+  border-radius: 8px;
+}
